@@ -1,6 +1,8 @@
 # First, install chocolatey in order to automate the packages installation
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+# Avoid confirmation to install packages
+choco feature enable -n allowGlobalConfirmation
 # Install the programs using chocolatey package manager, must be an administrative shell
 choco install 7zip bitwarden foxitreader epicgameslauncher steam-client git vscode microsoft-teams firefox python qbittorrent rpi-imager spotify telegram whatsapp vlc cura-new
 
