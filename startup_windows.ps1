@@ -4,7 +4,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # Avoid confirmation to install packages
 choco feature enable -n allowGlobalConfirmation
 # Install the programs using chocolatey package manager, must be an administrative shell
-choco install 7zip bitwarden foxitreader epicgameslauncher steam-client git vscode microsoft-teams firefox python qbittorrent rpi-imager spotify telegram whatsapp vlc cura-new
+choco install 7zip bitwarden foxitreader epicgameslauncher steam-client git vscode microsoft-teams firefox python qbittorrent rpi-imager spotify telegram whatsapp vlc cura-new croc
 
 # Install windows package manager to install apps from microsoft store
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v-0.3.11102-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle" -OutFile "$Env:temp\wpm.appxbundle"
