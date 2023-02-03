@@ -7,9 +7,15 @@ sudo apt-get upgrade
 sudo apt-get update
 
 # Download & install all the packages wanted in default repositories
-sudo apt-get install vscode spotify nano neovim rclone microsoft-teams pdfsam bitwarden vlc htop nmap git httpie python3 python3-pip telegram whatsapp openjdk-8-jre
+sudo apt-get install vscode spotify nano neovim rclone bitwarden vlc htop nmap git httpie python3 python3-pip telegram whatsapp openjdk-11-jre batcat docker docker-compose
 
 # Install packages from other sources
+#Fish - Shell
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
+chsh -s /usr/bin/fish #Make Fish default shell
+
 # Croc - File transfer CLI
 curl https://getcroc.schollz.com | bash
 
@@ -24,5 +30,5 @@ sudo apt update
 
 sudo apt install brave-browser
 
-# RPI Imager
-curl -sL -o /tmp/imager_latest_amd64.deb "https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb" && sudo apt install -y /tmp/imager_latest_amd64.deb
+# Dotfiles
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply davidadrianrg
